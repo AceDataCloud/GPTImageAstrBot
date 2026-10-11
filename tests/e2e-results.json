@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "astrbot_version": "4.28.2",
+    "installation": "isolated editable local plugin installation",
+    "chat_model": "gpt-4.1-mini through the generic OpenAI-compatible source",
+    "marketplace_installation": "not tested; AstrBot Cloud listing pending"
+  },
+  "chat_tools_registered": ["gpt_image_generate", "gpt_image_get_task"],
+  "primary_case": {
+    "prompt": "A single blue paper sphere on a plain cream background, clean studio photograph, no text. AstrBot integration test.",
+    "model": "gpt-image-2",
+    "size": "1024x1024",
+    "quality": "low",
+    "generation_tool_calls": 1,
+    "task_id": "8cc6a0a4-fad4-4cfc-8573-1d9011d4c669",
+    "trace_id": "609bfc60-0e5c-40fc-bb3b-1d091eeb1bc2",
+    "terminal_status": "succeeded",
+    "terminal_success": true,
+    "final_image_count": 1,
+    "media_probe": {
+      "host": "cdn.acedata2.cloud",
+      "http_status": 200,
+      "content_type": "image/png",
+      "codec": "png",
+      "width": 1024,
+      "height": 1024
+    },
+    "usage": {
+      "api_id": "8f01fe72-8a3e-4872-8d8d-330cde179b3a",
+      "status_code": 200,
+      "original_amount_credits": 0.11,
+      "deducted_amount_credits": 0.099,
+      "exact_trace_matches": 1
+    }
+  },
+  "limits": [
+    "The verified installation was local, not from the public AstrBot market.",
+    "Only the primary gpt-image-2 generation and same-task retrieval were run through AstrBot chat.",
+    "Market search and installation require AstrBot Cloud publication."
+  ]
+}
