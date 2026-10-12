@@ -2,7 +2,7 @@
 
 Generate one GPT Image 2 image in AstrBot chat through your own Ace Data Cloud account. `gpt_image_generate` submits one asynchronous job; `gpt_image_get_task` queries the **same task ID** until it succeeds. A submitted job or preview URL is not a final image.
 
-[简体中文指南](readme/README_zh_Hans.md) · [GPT Image API](https://platform.acedata.cloud/documents) · [Current prices](https://platform.acedata.cloud/models)
+[简体中文指南](readme/README_zh_Hans.md) · [GPT Image API](https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_documents) · [Current prices](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_pricing)
 
 ## 1. Find and install
 
@@ -12,7 +12,9 @@ The AstrBot Cloud listing has not yet been published. After the source release i
 
 ## 2. Get a key with image and task access
 
-Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications). Open **General application** to copy a key, or **Manage Keys → Create** to make an AstrBot-specific key. A service-specific key must allow both `/openai/images/generations` and `/openai/tasks`. Check current model access, pricing, and balance before generating.
+New account? Register and sign in first. If the Applications page has no General application yet, choose **Initialize General Application**, then continue with the key steps below.
+
+Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_api_key). Open **General application** to copy a key, or **Manage Keys → Create** to make an AstrBot-specific key. A service-specific key must allow both `/openai/images/generations` and `/openai/tasks`. Check current model access, pricing, and balance before generating.
 
 Copy the key value only. Do not add `Bearer ` or use a `platform-...` management token. Never put the key in a chat prompt or repository file.
 

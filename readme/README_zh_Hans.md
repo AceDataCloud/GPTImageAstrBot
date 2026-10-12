@@ -2,7 +2,7 @@
 
 通过自己的 Ace Data Cloud 账号在 AstrBot 聊天中生成一张 GPT Image 2 图片。`gpt_image_generate` 异步提交一次任务；`gpt_image_get_task` 按**同一个 task ID** 查询直到完成。提交成功或出现预览链接不等于最终图片。
 
-[English guide](../README.md) · [GPT Image API](https://platform.acedata.cloud/documents) · [当前价格](https://platform.acedata.cloud/models)
+[English guide](../README.md) · [GPT Image API](https://platform.acedata.cloud/documents?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_documents) · [当前价格](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_pricing)
 
 ## 1. 搜索并安装
 
@@ -12,7 +12,9 @@ AstrBot Cloud 尚未正式上架。源码合并发布后，可通过 **Installed
 
 ## 2. 获取生成与查询权限的 Key
 
-登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications)，打开 **General application** 复制 Key，或进入 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须同时允许 `/openai/images/generations` 和 `/openai/tasks`。生成前检查模型权限、当前价格与余额。
+首次使用请先注册并登录；如果应用页还没有通用应用，点击 **初始化通用应用（Initialize General Application）**，再按下面步骤管理密钥。
+
+登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=gptimageastrbot_readme_api_key)，打开 **General application** 复制 Key，或进入 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须同时允许 `/openai/images/generations` 和 `/openai/tasks`。生成前检查模型权限、当前价格与余额。
 
 只复制 Key 本身，不加 `Bearer `，也不要使用 `platform-...` 管理 Token。不要把 Key 写进聊天消息或仓库。
 
