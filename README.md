@@ -75,6 +75,10 @@ If status is `pending`, wait and query the **same ID** again. The plugin withhol
 
 ## 6. Check billing and troubleshoot
 
+### Cancelled tasks and interrupted waiting
+
+An explicit failed/cancelled/rejected task is terminal: the plugin returns `status: failed`, `success: false` and no media, even if `finished_at` is still empty. It does not resubmit. Cancelling a local chat/command stops waiting locally; it does **not** cancel an upstream generation, and an already-started HTTP request may still finish. Inspect the original task/history and keep the same ID; there is no upstream-cancel command in this plugin.
+
 Use the returned trace ID in your Ace Data Cloud application usage history. For the verified `gpt-image-2` single-image route, the current source rule lists 0.11 Credits before account discounts; verify the live price before use. Task lookups retrieve the existing job.
 
 | Symptom | Check |
@@ -95,3 +99,21 @@ In an isolated official AstrBot `v4.28.2` instance, ChatUI invoked generation ex
 ## Brand asset
 
 `logo.png` is the unmodified current [GPT Image service icon](https://cdn.acedata.cloud/7dljuv.png), SHA-256 `b525d3451af82c229d95402f91a20e74bd8b738c75b77c12a2592cb1d02b344f`.
+
+## Reproduce the no-cost host check
+
+From this repository in an isolated Python 3.12 environment:
+
+```bash
+uv venv --python 3.12 .venv-host
+uv pip install --python .venv-host/bin/python astrbot==4.29.0
+.venv-host/bin/python scripts/verify_host.py
+```
+
+The check needs no API Key and starts no server. It imports real AstrBot
+decorators, registers both commands/two tools, checks admin/non-admin access,
+masked-key schema, missing-Key handling and cancellation propagation with
+socket access blocked. Fake events and mocked cancellation do not establish
+a full message-dispatcher, market install, live generation, task ownership,
+new billing or signup/conversion result. Use normal `python -m pytest -q`
+for transport and command regression tests.

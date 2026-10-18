@@ -79,7 +79,7 @@ class GPTImageClient:
                 "Authorization": "Bearer " + self._api_key,
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "User-Agent": "AceDataCloudAstrBot/0.1.0",
+                "User-Agent": "AceDataCloudAstrBot/0.1.1",
             },
             method="POST",
         )
@@ -183,10 +183,10 @@ class GPTImageClient:
             "trace_id": str(result.get("trace_id") or body.get("trace_id") or ""),
         }
         state = str(result.get("state") or result.get("status") or "").lower()
-        if not result or ("finished_at" in body and body["finished_at"] is None):
-            return {**base, "status": "pending", "success": False, "image_urls": []}
         if state in FAILED or result.get("success") is False or result.get("error"):
             return {**base, "status": "failed", "success": False, "image_urls": []}
+        if not result or ("finished_at" in body and body["finished_at"] is None):
+            return {**base, "status": "pending", "success": False, "image_urls": []}
         if state not in COMPLETE and not body.get("finished_at"):
             return {**base, "status": "pending", "success": False, "image_urls": []}
         urls: list[str] = []

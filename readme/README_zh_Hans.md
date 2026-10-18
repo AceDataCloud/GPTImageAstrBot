@@ -75,6 +75,10 @@ AstrBot Cloud 尚未正式上架。源码已合并，可通过 **Plugins → Plu
 
 ## 6. 核对账单与排障
 
+### 任务取消与本地中断
+
+任务明确 failed/cancelled/rejected 时视为终态：即使 `finished_at` 尚未填入，也返回 `status: failed`、`success: false`，不显示媒体、不重新提交。本地取消聊天或指令只中断等待，**不会取消服务端生成**，已开始的 HTTP 请求仍可能完成。保留原 task ID 并查请求历史；本插件没有服务端取消任务指令。
+
 在 Ace Data Cloud 应用用量中按返回的 trace ID 精确核对。经验证的 `gpt-image-2` 单张路径当前源码规则标价 0.11 Credits，账户折扣另计；调用前仍须核对线上价格。任务查询读取已存在的任务。
 
 | 现象 | 检查项 |
@@ -95,3 +99,18 @@ AstrBot Cloud 尚未正式上架。源码已合并，可通过 **Plugins → Plu
 ## 品牌素材
 
 `logo.png` 是未修改的当前 [GPT Image 服务图标](https://cdn.acedata.cloud/7dljuv.png)，SHA-256 为 `b525d3451af82c229d95402f91a20e74bd8b738c75b77c12a2592cb1d02b344f`。
+
+## 复现免费宿主检查
+
+在本仓库中使用独立 Python 3.12 环境：
+
+```bash
+uv venv --python 3.12 .venv-host
+uv pip install --python .venv-host/bin/python astrbot==4.29.0
+.venv-host/bin/python scripts/verify_host.py
+```
+
+无需 API Key，不启动服务。检查导入真实 AstrBot 装饰器、注册两个指令/两个工具，
+验证管理员允许/非管理员拒绝、Key 遮罩 schema、空 Key 错误与取消传播，并阻止 socket 连接。
+事件和取消为测试替身，不能据此声称完整消息分发、官方市场安装、真实生成、任务归属、
+新账单或注册转化已验。传输和指令回归使用常规 `python -m pytest -q`。
