@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "display_name": "GPT Image by Ace Data Cloud",
+    "short_desc": "Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud.",
+    "desc": "Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud. Configure your own Ace API key. /gptimage_ace shows help; administrators use /gptimage_ace_task for an existing task. This integration is provided by Ace Data Cloud."
+  },
+  "config": {
+    "api_key": {
+      "description": "Ace Data Cloud API Key for GPT Image",
+      "hint": "Copy/create a dedicated key in Ace Applications → General application → Manage Keys. Allow /openai/images/generations and /openai/tasks. No Bearer prefix; never paste into chat. Masking does not encrypt the data directory."
+    }
+  }
+}
