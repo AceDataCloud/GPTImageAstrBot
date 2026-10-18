@@ -1,12 +1,16 @@
 name: astrbot_plugin_gpt_image_acedatacloud
 display_name: GPT Image by Ace Data Cloud
-short_desc: Generate a GPT Image 2 image and retrieve the final result in chat.
-desc: Use your Ace Data Cloud key to generate one GPT Image 2 image, then query the same task ID for its final URL.
-version: 0.1.0
+short_desc: Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud.
+desc: >-
+  Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud. Install this Ace Data Cloud integration, configure your own API key, and use /gptimage_ace for setup or the administrator-only /gptimage_ace_task for an existing task. Not an official GPT Image publisher plugin.
+version: 0.1.1
 author: acedatacloud
 repo: https://github.com/AceDataCloud/GPTImageAstrBot
 astrbot_version: ">=4.28.2,<5"
 tags:
   - GPT Image
+  - GPT Image 2
+  - GPTImage
   - image generation
+  - 图片生成
   - Ace Data Cloud
