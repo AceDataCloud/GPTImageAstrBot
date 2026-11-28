@@ -18,7 +18,7 @@ The AstrBot Cloud listing has not yet been published. The source release is merg
 
 ## 2. Get a key with image and task access
 
-[Register or sign in to Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen) first. Initialize **General application** if it does not exist. The following images show the shared Ace Applications page, not AstrBot.
+[Register or sign in to Ace](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen) first. Open **General Application**. The following images show the shared Ace Applications page, not AstrBot.
 
 Sign in at [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=astrbot&utm_medium=referral&utm_campaign=evergreen). Open **General application** to copy a key, or **Manage Keys → Create** to make an AstrBot-specific key. A service-specific key must allow both `/openai/images/generations` and `/openai/tasks`. Check current model access, pricing, and balance before generating.
 
