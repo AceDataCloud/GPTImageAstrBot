@@ -20,7 +20,7 @@
 
 ## 2. 获取生成与查询权限的 Key
 
-先[注册或登录 Ace](https://platform.acedata.cloud/console/applications?utm_source=github&utm_medium=referral&utm_campaign=evergreen)；首次没有通用应用时，先初始化 **General application**。下图取自同一 Ace 应用管理页面，不是 AstrBot 界面。
+先[注册或登录 Ace](https://platform.acedata.cloud/console/applications?utm_source=github&utm_medium=referral&utm_campaign=evergreen)，打开**通用应用**。下图取自同一 Ace 应用管理页面，不是 AstrBot 界面。
 
 登录 [Ace Data Cloud Applications](https://platform.acedata.cloud/console/applications?utm_source=github&utm_medium=referral&utm_campaign=evergreen)，打开 **General application** 复制 Key，或进入 **Manage Keys → Create** 创建 AstrBot 专用 Key。服务专用 Key 必须同时允许 `/openai/images/generations` 和 `/openai/tasks`。生成前检查模型权限、当前价格与余额。
 
