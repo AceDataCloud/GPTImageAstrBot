@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "display_name": "GPT Image by Ace Data Cloud",
+    "display_name": "GPT Image",
     "short_desc": "Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud.",
     "desc": "Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud. Configure your own Ace API key. /gptimage_ace shows help; administrators use /gptimage_ace_task for an existing task. This integration is provided by Ace Data Cloud."
   },
