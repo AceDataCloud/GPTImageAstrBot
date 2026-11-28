@@ -1,10 +1,10 @@
 <!-- Generated from README.md by AceDataCloud/Index plans/plugin-readme-audit/render_channel_readmes.py. -->
 
-# GPT Image for AstrBot
+# GPT Image
+
+<img src="../logo.png" width="96" height="96" alt="GPT Image">
 
 Generate one GPT Image 2 image in AstrBot chat through your own Ace Data Cloud account. `gpt_image_generate` submits one asynchronous job; `gpt_image_get_task` queries the **same task ID** until it succeeds. A submitted job or preview URL is not a final image.
-
-**This PR targets 0.1.1** with native help/admin lookup commands, bilingual configuration and illustrated setup. Existing 0.1.0 installations do not gain these entries until the source is merged and the package is published/updated.
 
 This independent **GPT Image integration is provided by Ace Data Cloud**. It is not an official plugin from the GPT Image publisher or the AstrBot team. Use your own Ace account and API key.
 
@@ -14,7 +14,7 @@ This independent **GPT Image integration is provided by Ace Data Cloud**. It is 
 
 Current upstream navigation (2026-10-18): **Plugins → Plugins → Plugin Market / Installed**. The earlier tested 4.28.2 English UI may label the section Extensions. Configure this service in the installed plugin gear; **do not paste its key into model-provider settings**.
 
-**Publication status (2026-10-18): not yet listed in the official market.** After publication, open [AstrBot Cloud Plugin Market](https://cloud.astrbot.app/market), search **GPT Image**, and verify **GPT Image by Ace Data Cloud / acedatacloud**. For the current preview, use the repository URL below; a repository install is not official market publication.
+Search the [AstrBot Cloud plugin market](https://cloud.astrbot.app/market) for **GPT Image** and check the publisher `acedatacloud`.
 
 The AstrBot Cloud listing has not yet been published. The source release is merged; use **Plugins → Plugins → Installed → Install Plugin (+) → Install from URL** with `https://github.com/AceDataCloud/GPTImageAstrBot` for a preview. URL installation does not prove official market discovery or installation.
 
@@ -38,15 +38,13 @@ Images reused and checked on 2026-10-18; original capture dates were not supplie
 
 ### Where to paste it in AstrBot
 
-Open **Plugins → Plugins → Installed**, select the gear on **GPT Image by Ace Data Cloud**, paste the key into **Ace Data Cloud generation API key with GPT Image access** (stored as `api_key`), and save. No `Bearer ` prefix; never paste the key in chat.
+Open **Plugins → Plugins → Installed**, select the gear on **GPT Image**, paste the key into **Ace Data Cloud generation API key with GPT Image access** (stored as `api_key`), and save. No `Bearer ` prefix; never paste the key in chat.
 
-![AstrBot official historical plugin configuration reference, not this plugin running](../_assets/tutorial/astrbot-plugin-config-reference.png)
-
-This is the official AstrBot `helloworld` configuration example, labelled v3.4.14 (build v3.4.9), not an Ace setup or run. The instructions above identify this plugin’s exact field and current navigation; later UI layouts may differ.
+[AstrBot plugin configuration guide](https://docs.astrbot.app/en/dev/star/plugin-new.html)
 
 ## 3. Configure AstrBot
 
-Under **Plugins → Plugins → Installed**, select the gear icon for **GPT Image by Ace Data Cloud**. Enter the key in **Ace Data Cloud generation API key with GPT Image access** and save. The WebUI masks the field, but the AstrBot data directory stores the original value; protect that directory.
+Under **Plugins → Plugins → Installed**, select the gear icon for **GPT Image**. Enter the key in **Ace Data Cloud generation API key with GPT Image access** and save. The WebUI masks the field, but the AstrBot data directory stores the original value; protect that directory.
 
 Choose a chat model that supports tool calling and allow `gpt_image_generate` and `gpt_image_get_task` for the active profile and persona. Check **Plugins → Manage Behaviors → Function Tools** if a tool is unavailable.
 
@@ -100,7 +98,7 @@ In an isolated official AstrBot `v4.28.2` instance, ChatUI invoked generation ex
 
 ## Brand asset
 
-`logo.png` is the unmodified current [GPT Image service icon](https://cdn.acedata.cloud/7dljuv.png), SHA-256 `b525d3451af82c229d95402f91a20e74bd8b738c75b77c12a2592cb1d02b344f`.
+The plugin includes original 256×256 artwork. [SVG source](../_assets/artwork/logo.svg)
 
 ## Reproduce the no-cost host check
 

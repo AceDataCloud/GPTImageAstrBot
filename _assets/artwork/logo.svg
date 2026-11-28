@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Layered picture editor</title>
+  <defs>
+    <linearGradient id="background" x1="17" y1="14" x2="231" y2="226" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#463763"/>
+      <stop offset="1" stop-color="#251E42"/>
+    </linearGradient>
+    <linearGradient id="card" x1="68" y1="89" x2="167" y2="187" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E7FF"/>
+      <stop offset="1" stop-color="#CEBBF7"/>
+    </linearGradient>
+    <clipPath id="window"><rect x="66" y="99" width="96" height="64" rx="6"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="248" height="248" rx="54" fill="url(#background)"/>
+  <g transform="rotate(10 140 126)">
+    <rect x="89" y="60" width="111" height="118" rx="13" fill="#8870BA"/>
+    <path d="M103 74h82" fill="none" stroke="#AA92CF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <rect x="55" y="87" width="120" height="104" rx="14" fill="#211935" opacity=".57" transform="translate(0 5)"/>
+  <rect x="55" y="87" width="120" height="104" rx="14" fill="url(#card)"/>
+  <g clip-path="url(#window)">
+    <rect x="66" y="99" width="96" height="64" fill="#685585"/>
+    <circle cx="142" cy="113" r="7" fill="#FFD29B"/>
+    <path d="M64 161l31-31 21 21 20-18 29 24v12H64z" fill="#A88FC6"/>
+    <path d="M64 163l37-21 22 17 18-11 24 11v9H64z" fill="#D6BCE6"/>
+  </g>
+  <path d="M69 176h32" fill="none" stroke="#9277AC" stroke-width="4" stroke-linecap="round"/>
+  <g transform="rotate(38 170 166)">
+    <path d="M162 132a6 6 0 0 1 6-6h5a6 6 0 0 1 6 6v61l-8 19-9-19z" fill="#FFAD77" stroke="#3B2A50" stroke-width="4.5" stroke-linejoin="round"/>
+    <path d="M164 140h13M164 190h13" stroke="#A9695E" stroke-width="3"/>
+    <path d="M168 204l3 8 3-8z" fill="#3B2A50"/>
+  </g>
+</svg>

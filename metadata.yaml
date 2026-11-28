@@ -1,12 +1,13 @@
 name: astrbot_plugin_gpt_image_acedatacloud
-display_name: GPT Image by Ace Data Cloud
+display_name: GPT Image
 short_desc: Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud.
 desc: >-
   Generate one GPT Image 2 image and retrieve the same task through Ace Data Cloud. Install this Ace Data Cloud integration, configure your own API key, and use /gptimage_ace for setup or the administrator-only /gptimage_ace_task for an existing task. Not an official GPT Image publisher plugin.
-version: 0.1.1
+version: 0.1.2
 author: acedatacloud
 repo: https://github.com/AceDataCloud/GPTImageAstrBot
 astrbot_version: ">=4.28.2,<5"
+category: integration
 tags:
   - GPT Image
   - GPT Image 2
